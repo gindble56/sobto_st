@@ -69,5 +69,4 @@ df_1 = df_1.reindex(columns=['エリア', '都道府県', '店名'])
 list_1 = st.checkbox('訪問リスト表示')
 
 if list_1 == True:
-    # st.dataframe(df_1, width=1000, height=500)
     st.table(df_1)
