@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 
 
-df = pd.read_excel("蕎麦屋リスト.xlsx")
+df = pd.read_excel("リスト.xlsx")
 store = df[["緯度", "経度", "店名", "都道府県"]].values
 
 def AreaMarker(df,m):
@@ -63,7 +63,7 @@ st.text('店名、場所は訪れた時点の情報です。閉店、移転さ�
 #
 """
 
-df_1 = df.drop(['緯度', '経度', '訪問日', '備考'], axis=1)
+df_1 = df.drop(['緯度', '経度'], axis=1)
 df_1 = df_1.reindex(columns=['エリア', '都道府県', '店名'])
 
 list_1 = st.checkbox('訪問リスト表示')
